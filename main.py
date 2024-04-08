@@ -3,10 +3,12 @@ from typing import Union
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
+import ml_func
 
 
 class Item(BaseModel):
     images:list
+    type:str
 
 app = FastAPI()
 origins = [
@@ -33,4 +35,5 @@ def read_item(item_id: int, q: Union[str, None] = None):
 @app.post("/items")
 async def create_item(item:Item):
     #print(item)
-    return item
+    print(list(ml_func.get_geo(ml_func.pil_from_base(item.images)[0])))
+    return {'images':[{"img":i, 'text': 'text','pos':list(ml_func.get_geo(ml_func.pil_from_base(item.images)[0]))} for i in item.images]}

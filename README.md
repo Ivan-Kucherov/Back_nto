@@ -19,4 +19,4 @@
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
 [Vue-url]: https://vuejs.org/
 [fastapi]: https://img.shields.io/badge/FastAPI-35495E?style=for-the-badge&logo=fastapi&logoColor=4FC08D
-[fastapi-url]: [https://vuejs.org/](https://fastapi.tiangolo.com/) 
+[fastapi-url]: https://fastapi.tiangolo.com/
